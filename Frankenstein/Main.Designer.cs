@@ -41,7 +41,10 @@
             this.ok = new System.Windows.Forms.Button();
             this.showBalloon = new System.Windows.Forms.CheckBox();
             this.moveMouse = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.sendKeyPress = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.timerInterval)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // trayIcon
@@ -58,26 +61,25 @@
             // 
             this.timerInterval.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.timerInterval.Location = new System.Drawing.Point(53, 55);
+            this.timerInterval.Location = new System.Drawing.Point(51, 66);
             this.timerInterval.Maximum = new decimal(new int[] {
             600,
             0,
             0,
             0});
             this.timerInterval.Name = "timerInterval";
-            this.timerInterval.Size = new System.Drawing.Size(260, 20);
+            this.timerInterval.Size = new System.Drawing.Size(375, 20);
             this.timerInterval.TabIndex = 0;
             this.timerInterval.Value = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.timerInterval.ValueChanged += new System.EventHandler(this.timerInterval_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 57);
+            this.label1.Location = new System.Drawing.Point(11, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 1;
@@ -87,7 +89,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(319, 57);
+            this.label2.Location = new System.Drawing.Point(432, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
@@ -96,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 22);
+            this.label3.Location = new System.Drawing.Point(11, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 3;
@@ -108,16 +110,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.keysListBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.keysListBox.FormattingEnabled = true;
-            this.keysListBox.Location = new System.Drawing.Point(53, 19);
+            this.keysListBox.Location = new System.Drawing.Point(51, 30);
             this.keysListBox.Name = "keysListBox";
-            this.keysListBox.Size = new System.Drawing.Size(260, 21);
+            this.keysListBox.Size = new System.Drawing.Size(375, 21);
             this.keysListBox.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 22);
+            this.label4.Location = new System.Drawing.Point(432, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 5;
@@ -126,7 +128,7 @@
             // ok
             // 
             this.ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ok.Location = new System.Drawing.Point(291, 150);
+            this.ok.Location = new System.Drawing.Point(416, 198);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(75, 23);
             this.ok.TabIndex = 6;
@@ -136,7 +138,7 @@
             // 
             // showBalloon
             // 
-            this.showBalloon.Location = new System.Drawing.Point(53, 120);
+            this.showBalloon.Location = new System.Drawing.Point(26, 151);
             this.showBalloon.Name = "showBalloon";
             this.showBalloon.Size = new System.Drawing.Size(260, 24);
             this.showBalloon.TabIndex = 7;
@@ -146,28 +148,50 @@
             // moveMouse
             // 
             this.moveMouse.AutoSize = true;
-            this.moveMouse.Location = new System.Drawing.Point(53, 97);
+            this.moveMouse.Location = new System.Drawing.Point(26, 128);
             this.moveMouse.Name = "moveMouse";
             this.moveMouse.Size = new System.Drawing.Size(88, 17);
             this.moveMouse.TabIndex = 8;
             this.moveMouse.Text = "Move Mouse";
             this.moveMouse.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.sendKeyPress);
+            this.groupBox1.Controls.Add(this.keysListBox);
+            this.groupBox1.Controls.Add(this.timerInterval);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(479, 100);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            // 
+            // sendKeyPress
+            // 
+            this.sendKeyPress.AutoSize = true;
+            this.sendKeyPress.Location = new System.Drawing.Point(14, 0);
+            this.sendKeyPress.Name = "sendKeyPress";
+            this.sendKeyPress.Size = new System.Drawing.Size(101, 17);
+            this.sendKeyPress.TabIndex = 10;
+            this.sendKeyPress.Text = "Send Key Press";
+            this.sendKeyPress.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AcceptButton = this.ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 185);
+            this.ClientSize = new System.Drawing.Size(503, 233);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.moveMouse);
             this.Controls.Add(this.showBalloon);
             this.Controls.Add(this.ok);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.keysListBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.timerInterval);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -180,6 +204,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.timerInterval)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +230,7 @@
         #endregion
 
         private System.Windows.Forms.CheckBox moveMouse;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox sendKeyPress;
     }
 }

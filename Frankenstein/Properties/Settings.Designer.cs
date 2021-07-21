@@ -70,5 +70,17 @@ namespace Frankenstein.Properties {
                 this["MoveMouse"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool SendKeyPress {
+            get {
+                return ((bool)(this["SendKeyPress"]));
+            }
+            set {
+                this["SendKeyPress"] = value;
+            }
+        }
     }
 }
